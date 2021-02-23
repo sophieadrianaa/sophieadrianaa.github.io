@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: 'Abel', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/galaxy.jpg);
+}
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: #C5903A;
+}
+
+section {
+	flex-basis: 57%;
+	margin-right: 10%;
+}
+aside {
+	flex-basis: 33%;
+}
+p, [for="abtype"],[for="comments"]{
+	/*I could also write a class here for the abtype and add it in the html e.g. abspace and add to the label in html */
+	margin: 2rem 0 1rem 0;
+}
+fieldset{
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+	padding: 1rem 5rem;
+	
+}
+legend{
+	/*this is an inline element. you can see this when puttin a border around and the box is only as big as it's content */
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	border: 0px solid red;
+}
+label{
+
+	display: block;
+	/*this makes the labels as wide as the parent (fieldset) */
+	padding-bottom: 0.3rem;
+	/*this gives room between the labels and the input fields*/
+}
+textarea{
+	height: 10rem;
+	padding: 1rem;
+}
+select{
+	font-size: 1rem;
+}
+button{
+	font-size: 1rem;
+	margin: 2rem 0;
+	border-radius: 10px;
+	background-color: #bb342F;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+}
+button:hover{
+	background-color: white;
+	color: #bb342F;	
+}
+input:not([type="radio"]):not([type="checkbox"]),textarea, select{
+	display: block;
+	/*this messes up our checkboxes and radio buttons, we can exclude them from the styling with :not*/
+	margin-bottom: 2rem;
+	width: 20rem;
+	font-family: 'Abel', sans-serif;
+	font-size: 1rem;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	border-radius: 10px;
+	border:none;
+}
+iframe{
+	border-radius: 10px;
+}
+address, h3{
+	display: table;
+	margin: 0 ;
+	padding: 5px;
+	color: white;
+	font-weight: bold;
+	background-color: darkgoldenrod;
+	
+
+}
+h3{
+	margin-bottom: 1rem;
+}
