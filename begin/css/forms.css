@@ -11,7 +11,7 @@ body {
 	background-image: url(../img/galaxy.jpg);
 }
 .wrapper {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 1em;
 	display: flex;
@@ -20,11 +20,11 @@ body {
 }
 
 section {
-	flex-basis: 57%;
+	flex-basis: 60%;
 	margin-right: 10%;
 }
 aside {
-	flex-basis: 33%;
+	flex-basis: 40%;
 }
 p, [for="abtype"],[for="comments"]{
 	/*I could also write a class here for the abtype and add it in the html e.g. abspace and add to the label in html */
