@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
+	
+	
+</head>
+<body>
+	<div class="wrapper">
+		<section>
+			<h1>Alien Abduction Order Form</h1>
+			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+		<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">	
+			<input type="hidden" name="send_to" value="sophie.glowotz@trivago.com">
+			<fieldset>
+				<legend>Your contact information</legend>
+				<label for="name">
+					<!-- label tag is adding accessebility items, for value needs to be the same as the id below in the input
+					name fields are there in the input section for processing the form in the backend-->
+				Your name 
+			</label>
+					<input type="text" id="name" name="name" placeholder="First name, last name">
+				<label for="phone">
+					Phone number
+				</label>
+				<input type="tel" id="phone" name="phone" placeholder="+49 ***">
+				<label for="email">
+					Email
+				</label>
+				<input type="email" id="email" name="email">
+			</fieldset>
+<fieldset>
+				<legend>About your abduction </legend>
+
+				<label for="date">Requested  date</label>
+				<!-- if I don't want the default look of the calender from the browser, date should be coded in JS-->
+				<input type="date" id="date" name="date">
+				<label for="qty"> How many people would you like abducted?</label>
+				<input type="number" id="qty" name="qty" min="1" max="10">
+
+				<p>What type of UFO do you prefer?</p>
+			<label>
+				
+				<input type="radio" 
+				name="ufotype" value="classic">
+				
+						Classic oval UFO
+			</label>
+			<!-- to be able to click the whole sentence, you need to add label around the whole item to be selected. For radio buttons, no id or label FOR is needed in HTML-->
+			<!--you always need NAME to be added in the input to only allow one button to be selected-->
+
+			<label>
+				<input type="radio" 
+				id="radio" name="ufotype" value="starwars" checked >
+
+				><!--for radio buttons pre-selection works with "checked", not "selected"-->
+						Star Wars-style Imperial cruiser
+					
+			</label>
+			<label>
+				<input type="radio" 
+				id="radio"
+				name="ufotype" value="battlestar">
+
+						Battlestar Galactica-style Viper
+					
+			</label>
+			<label>
+				<input type="radio" 
+				id="radio"
+				name="ufotype" value="borgstyle">
+						Borg-style cube
+						
+			</label> 
+					
+				<label for="abtype">What type of abduction experience do you want?</label>
+				
+					<select id="abtype" name="abtype">
+						<option selected>Select one...</option>
+						<!--this is going to be the default option chosen-->
+						<option value="tour">Tour of the solar system</option>
+						<option value="dinner">Alien dinner and discussion</option>
+						<option value="dance">Alien dance lessons</option>
+						<option value="whales">Whale watching</option>
+					</select>
+				<label for="comments">Special requests:</label>
+				<textarea id="comments" name="comments" maxlength="50"></textarea>
+
+				<label>
+					<!--when the label goes around the whole text/ field, we don't need an ID associated, so also no label FOR
+					You CAN put in a FOR though-->
+				<input type="checkbox" value="subscribe" name="subscribe"  checked>
+				Add me to your email list
+			</label>
+		</fieldset>
+
+			<button type="submit">Submit your order </button>
+		</form>				
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.305773356142!2d6.746849900000002!3d51.2134426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8cbc448209bf3%3A0xf8a84a6b3ca1dbee!2strivago%20N.V.!5e0!3m2!1sde!2sde!4v1614006822616!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+		</aside>
+	</div>
+	<script src="js/forms.js"></script>
+</body>
+</html>
+
+
+
+
+
